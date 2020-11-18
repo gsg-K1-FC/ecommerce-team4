@@ -1,36 +1,33 @@
 # Ecommerce Project - Team4
 
-This website is e-commerce website and it is a responsive online shopping website, 
-where the customer can see all the available products and search for a specific item
-also the customer can filter items by price or category, 
-and he can add items to cart , delete them from cart and see total price 
-of items in cart.
-also the website has the seller part so the seller can add items ,edit them or delete them, 
-and can search in his items or products.
+## What is this website?
+  This website is an e-commerce responsive online shopping website, where the customer can see all the available products and search for a specific item also the customer can filter items by price or category, and he can add items to cart, delete them from cart and see total price of items in cart.
+  Also the website provides the seller view in which the seller can add his products, edit them or delete them, and can search in his items or products.
 
-# Design link:
-figma.com/file/VjvsWuXEHf4O00vzUOPON1/E-commerce?node-id=20%3A2
+## Design link:
+ [Figma link](figma.com/file/VjvsWuXEHf4O00vzUOPON1/E-commerce?node-id=20%3A2)
 
-# Github pages link:
-https://gsg-k1-fc.github.io/ecommerce-team4/.
+## Github pages link:
+[Ecommerce Website](https://gsg-k1-fc.github.io/ecommerce-team4/)
 
-# File structure:
-files include the following files,
-|
-├── index.html     which containe html code.
-└── script.js      which contain all javascript code.
-└── style.css      which contain css style code. 
-assests folder      which contain the images files.
+## File structure:
+includes the following files:
+- index.html: contains html code.
+- script.js: contains javascript code.
+- style.css: contains css style code. 
+- assests folder: contains the images files.
 
-# How to run the project:
-to run the project you need to: 
-- clone the repo into your local machine by the command
-     git clone git@github.com:gsg-K1-FC/ecommerce-team4.git
+## How to run the project:
+to run the project you need to:
+- clone the repo into your local machine by entering the command:
+
+`git clone git@github.com:gsg-K1-FC/ecommerce-team4.git`
+
 - Open the HTML on your browser.
 
-# Team member
-Our team members are: 
-- Sarah Al-Shareef
-- Sarah Abu Zenah
-- Khaleel Siaj
-- Obaid Nieroukh
+## Team members
+Our team members are:
+- [Sarah Al-Sharif](https://github.com/sarah-alsharif0)
+- [Sarah Abu Zeineh](https://github.com/saraAAZ)
+- [Khaleel Siaj](https://github.com/obaidofj)
+- [Obaid Nieroukh](https://github.com/khaleelsiaj)
