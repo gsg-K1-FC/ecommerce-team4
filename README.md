@@ -5,7 +5,7 @@
   Also the website provides the seller view in which the seller can add his products, edit them or delete them, and can search in his items or products.
 
 ## Design link:
- [Figma link](figma.com/file/VjvsWuXEHf4O00vzUOPON1/E-commerce?node-id=20%3A2)
+ [Figma link](https://www.figma.com/file/VjvsWuXEHf4O00vzUOPON1/E-commerce?node-id=0%3A1)
 
 ## Github pages link:
 [Ecommerce Website](https://gsg-k1-fc.github.io/ecommerce-team4/)
