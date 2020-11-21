@@ -1,8 +1,7 @@
 *{
     padding: 0rem;
     margin: 0rem;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;   
 }
 body{
     display: flex; 
@@ -10,6 +9,9 @@ body{
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+a, h1 {
+    font-family: 'Montserrat', sans-serif;
 }
 .header{
     display: flex;
@@ -55,17 +57,22 @@ body{
     font-weight: initial;
     font-style: normal;
 }
-.bode__pic{
-    background-image: url(https://unsplash.com/photos/zwsHjakE_iI?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink);
+.body__pic{
+    background-image: url(https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-1.2.1&auto=format&fit=crop&w=3452&q=80);
     width: 100%;
     background-size: cover;
-    height: 200px;
-    position: relative;
+    height: 640px;
     position: relative;
 }
 .body__about{
+    font-family: 'Xanh Mono', monospace;
+    font-size: 40px;
     position: absolute;
-    
+    color: rgba(245, 244, 196, 0.952);
+    text-align: center;
+    padding-left: 110px;
+    padding-top: 220px;
+    font-weight: 700;
 }
 .body__border{
     margin: 20px;  
@@ -85,3 +92,9 @@ body{
   font-weight: bolder;
   font-size: 18px;
 }
+.body__border a:hover{
+    font-size:20px;
+  color: #214942;
+}
+
+
