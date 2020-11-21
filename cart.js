@@ -23,7 +23,7 @@ let cardsContainer = document.getElementsByClassName("cards-container")[0];
 cardsContainer.appendChild(cards);
 
 products.forEach(function(product){
-    
+    hideEmptyCartText();
     let card= document.createElement("div");
     let cardImage= document.createElement("img");    
     let firstRowContainer = document.createElement("div");
@@ -45,7 +45,7 @@ products.forEach(function(product){
     quantityText.textContent="Quantity:";
     quantity.type="number";
     quantity.min="1";
-    quantity.placeholder="1";
+    quantity.value="1";
 
     card.appendChild(cardImage);
     firstRowContainer.appendChild(cardName);
@@ -57,9 +57,6 @@ products.forEach(function(product){
     card.appendChild(firstRowContainer);
     card.appendChild(secondRowContainer);
     card.appendChild(quantityContainer);
-
-    let cardContainer = document.getElementsByClassName("card-container")[0];
-    cardContainer.appendChild(card);
     
     card.className="card";
     cardImage.className="card-image";
@@ -68,17 +65,63 @@ products.forEach(function(product){
     deleteBtn.className="delete-btn";
     quantityContainer.className="quantity-container";
     quantity.className="quantity";
+    cardPrice.className="item-price";
 
     deleteBtn.addEventListener('click',function(event){
         var buttonClicked= event.target;
         buttonClicked.parentElement.parentElement.parentElement.remove();
         updateTotalPrice();
     });
-    
+
     cards.appendChild(card);
+    updateTotalPrice();
+    
 })
 cards.className="cards";
-// updateTotalPrice(){
+function showEmptyCartText(){
+    let emptyCardText= document.getElementsByClassName("empty-cart-container")[0];
+    let checkoutbtnContainer = document.getElementsByClassName("btn-checkout-container")[0];
+    let totalPriceContainer = document.getElementsByClassName("total-price-container")[0];
+    emptyCardText.classList.remove("hide");
+    totalPriceContainer.classList.add("hide");
+    checkoutbtnContainer.classList.add("hide");
+}
+function hideEmptyCartText(){
+        let emptyCardText= document.getElementsByClassName("empty-cart-container")[0];
+    let checkoutbtnContainer = document.getElementsByClassName("btn-checkout-container")[0];
+    let totalPriceContainer = document.getElementsByClassName("total-price-container")[0];
+    emptyCardText.classList.add("hide");
+    totalPriceContainer.classList.remove("hide");
+    checkoutbtnContainer.classList.remove("hide");
+}
+function updateTotalPrice(){
+    let itemPrice = document.getElementsByClassName("item-price");
+    let itemQuantity = document.getElementsByClassName("quantity");
+    let TotalPrice = document.getElementsByClassName("total-price")[0];
+    let total=0;
+    for(var i=0; i<itemPrice.length; i++){
+        total+= parseFloat(itemPrice[i].textContent.replace('$',''))*itemQuantity[i].value;
+    }
+    TotalPrice.textContent=total;
+    if(total==0)
+     showEmptyCartText();
+};
 
-// };
+function emptyCart(){
+    let cartItems =document.getElementsByClassName("card");
+    cartItems[0].parentNode.remove();
+    showEmptyCartText();
+}
 
+let checkoutBtn = document.getElementsByClassName("btn-checkout")[0];
+checkoutBtn.addEventListener("click",function(){
+    alert("Checkout Successful !!");
+    emptyCart();
+    updateTotalPrice();
+});
+let quantityInput = document.getElementsByClassName("quantity");
+for(var i=0;i<quantityInput.length;i++){
+    quantityInput[i].addEventListener('input',function(event){
+        updateTotalPrice();
+    });
+}

@@ -3,9 +3,42 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
 }
 button:focus{
     outline:0;
+}
+.empty-cart-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 3% 3% 3%;
+}
+.empty-cart-container strong{
+    font-size: 40px;
+    margin-bottom: 2%;
+    color: #363636ca;
+    text-align: center;
+}
+.empty-cart-container span{
+    font-size: 30px;
+    margin-bottom: 2%;
+    font-weight: 600;
+    color:  #3c9b8ac9;
+    text-align: center;
+}
+.empty-cart-container button a{
+    color: #ffffffcc;
+}
+.empty-cart-container button{
+    border: none;
+    background-color: #3c9b8ac9;
+    border-radius: 50px;
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 1%;
+    padding: 20px;
 }
 .cart{
     display: flex;
@@ -76,8 +109,6 @@ button:focus{
     background-color: white;
     outline: 0 ;
 }
-
-
 .card{
     display:flex;
     flex-direction:column;
@@ -124,7 +155,7 @@ button:focus{
 }
 .quantity{
     border:none;
-    width:10%;
+    width:20%;
     outline:0;
     margin-left:10px;
 }
@@ -133,4 +164,7 @@ button:focus{
     display:flex;
     flex-wrap:wrap;
     width:100%;
+}
+.hide{
+    display:none;
 }
