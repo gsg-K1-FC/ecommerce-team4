@@ -164,7 +164,6 @@ button:focus{
     font-size: 15px;
 }
 .cards-grid{
-    padding:2%;
     display:flex;
     flex-wrap:wrap;
     width:100%;

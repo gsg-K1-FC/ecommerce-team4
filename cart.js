@@ -19,11 +19,19 @@ let cart=[{
     price: "$100",
     category:"Technology",
     imageURL:"images/airpods.jpg" ,
+        },
+        {
+    id:4,
+    name: "SmartWatch",
+    desc: "",
+    price: "$200",
+    category:"Technology",
+    imageURL:"images/smartWatch.jpg" ,
         }];
     for(var i=0;i<cart.length;i++)
         cart[i].quantity="1";
 
-        showListView();
+        showGridView();
     let viewBtns = document.querySelectorAll('.view-btn');
     for(var i=0; i<viewBtns.length; i++){
         viewBtns[i].addEventListener("click",function(event){
@@ -37,15 +45,14 @@ let cart=[{
            viewBtns[i].addEventListener("click",function(event){
             var buttonSelected = event.target;
            if(buttonSelected.id==="list-view-btn"){
-  
-           showListView();
-           hideOtherView();
-           updateTotalPrice();
+                hideOtherView();
+                showListView();
+                updateTotalPrice();
         }
            else if(buttonSelected.id==="grid-view-btn") {
-            showGridView();
-            hideOtherView();
-            updateTotalPrice();
+                hideOtherView();
+                showGridView();
+                updateTotalPrice();
     }
            });
 }
@@ -83,6 +90,11 @@ function showGridView(){
     itemQuantity.type="number";
     itemQuantity.min="1";
     itemQuantity.value=product.quantity;
+
+    itemQuantity.addEventListener('input',function(e){
+        product.quantity=e.target.value;
+        updateTotalPrice();
+    })
     
 
     card.appendChild(cardImage);
@@ -115,8 +127,8 @@ function showGridView(){
             if(cart[i].id==itemId)
                 cart.splice(i,1);
         }
-        var buttonClicked= event.target;
-        buttonClicked.parentElement.parentElement.parentElement.remove();
+        hideOtherView();
+        showGridView();
         updateTotalPrice();
 
     });
@@ -130,6 +142,7 @@ cards.classList.add("items-container");
 }
 
 function showListView(){
+    
     let cards = document.createElement("div");
     let cardsContainer = document.getElementsByClassName("cards-container")[0];
     cardsContainer.appendChild(cards);
@@ -156,6 +169,10 @@ function showListView(){
     quantityTitle.className="quantity-title";
     emptyField.className="empty-field";
 
+    if(cart.length==0){
+        let titlesContainer = document.getElementsByClassName("titles")[0];
+        titlesContainer.remove();
+    }
     cart.forEach(function(product){
         let productRow = document.createElement("div");
         let imageContainer = document.createElement("div");
@@ -172,6 +189,11 @@ function showListView(){
         productQuantity.type="number";
         productQuantity.min="1";
         productQuantity.value=product.quantity;
+        
+        productQuantity.addEventListener('input',function(e){
+            product.quantity=e.target.value;
+            updateTotalPrice();
+        })
 
         imageContainer.appendChild(productImage);
         productRow.appendChild(imageContainer);
@@ -197,12 +219,12 @@ function showListView(){
                 if(cart[i].id==itemId)
                     cart.splice(i,1);
             }
-            var buttonClicked= event.target;
-            buttonClicked.parentElement.parentElement.remove();
+            hideOtherView();
+            showListView();
             updateTotalPrice();
-            let listElements = document.getElementsByClassName("item");
-            if(listElements.length==0)
-                titles.remove();
+            if(cart.length==0){
+                let titlesContainer = document.getElementsByClassName("titles")[0];
+                titlesContainer.remove();}
         });
         
     
@@ -255,14 +277,4 @@ checkoutBtn.addEventListener("click",function(){
     emptyCart();
     updateTotalPrice();
 });
-let quantityInput = document.getElementsByClassName("quantity-value");
-    for(var i=0;i<quantityInput.length;i++){
-        quantityInput[i].addEventListener('input',function(){
-            updateQuantity(i,this.value);
-        });
-    }
-    
-function updateQuantity(i,newValue){
-    cart[i].quantity=newValue;
-    updateTotalPrice();
-        }
+
