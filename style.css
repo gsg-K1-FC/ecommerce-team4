@@ -78,13 +78,13 @@ button:focus{
 .btns-container button:hover{
     background-color:#88C8BC;
 }
-.active{
+.selected{
     background-color: #88C8BC !important;
 }
 .btn-checkout-container{
     display: flex;
     justify-content: center;
-    margin: 2%;
+    margin: 1%;
 }
 .btn-checkout{
     border: none;
@@ -99,7 +99,8 @@ button:focus{
 }
 .total-price-container{
     display: flex;
-    margin-left: 5%;
+    margin-left: 30%;
+    margin-top: 2%;
     font-size: 20px;
     font-weight: 600;
 }
@@ -109,6 +110,8 @@ button:focus{
     background-color: white;
     outline: 0 ;
 }
+
+/* grid view style */
 .card{
     display:flex;
     flex-direction:column;
@@ -119,10 +122,10 @@ button:focus{
 }
 .card-image{
     width:225px;
+    margin: auto;
     height:225px;
     margin-bottom:10px;
     font-size:23px;
-    margin-left:8.5px;
 }
 .first-row-container{
     display:flex;
@@ -158,8 +161,9 @@ button:focus{
     width:20%;
     outline:0;
     margin-left:10px;
+    font-size: 15px;
 }
-.cards{
+.cards-grid{
     padding:2%;
     display:flex;
     flex-wrap:wrap;
@@ -167,4 +171,98 @@ button:focus{
 }
 .hide{
     display:none;
+}
+/* list view style */
+
+.titles{
+    display: flex;
+    width: 650px;
+    margin:auto;
+    margin-top: 1%;
+    font-size: 22px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border:solid 2px  #88C8BC;
+    border-radius: 25px ;
+    background: #DCEFEC;
+}
+.product-title{
+    padding: 2%;
+    width: 50%;
+    text-align: center;
+}
+.price-title{
+    padding: 2%;
+    width: 20%;
+    text-align: center;
+    border-left: solid 2px  #88C8BC;
+}
+.quantity-title{
+    padding: 2%;
+    width: 20%;
+    text-align: center;
+    border-left: solid 2px  #88C8BC;
+    border-right: solid 2px  #88C8BC;
+}
+.empty-field{
+    width: 10%;
+    border-left: solid 2px  #88C8BC;
+}
+.product-row{
+    display: flex;
+    width: 650px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 25px ;
+    margin-top: 0.5%;
+    border:solid 2px  #88C8BC;
+    background: #fafcfb;
+    font-size: 20px;
+}
+.image-container{
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+.product-image{
+    width: 80%; 
+    box-shadow: -6px 6px 11px -9px rgba(0,0,0,0.55);
+}
+.product-name{
+    width: 30%;
+    padding: 2%;
+    border-right: solid 2px  #88C8BC;
+}
+.product-price{
+    padding: 2%;
+    text-align: center;
+    width: 20%;
+    border-right: solid 2px  #88C8BC;
+}
+.product-quantity{
+    padding: 2%;
+    width: 20%;
+    border:none;
+    outline:0;
+    background: none;
+    text-align: center;
+    font-size: inherit;
+    border-right: solid 2px  #88C8BC;
+}
+.delete-btn-grid{
+    width: 10%;
+    background: none;
+    border:none;
+    font-size: 22px;
+    cursor: pointer;
+}
+.cards-list{
+    display: flex;
+    flex-direction: column;
 }
