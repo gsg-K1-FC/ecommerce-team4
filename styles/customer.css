@@ -65,6 +65,7 @@
   padding: 0.9rem;
   border-radius: 2rem;
   font-weight: initial;
+  background-color: #72c1b2;
 }
 .choice .button2 {
   font-size: 30px;
@@ -78,12 +79,11 @@
 .choice .button1:hover {
   background-color: #72c1b2;
 }
-.choice .button2:hover {
-  background-color: #72c1b2;
-}
+
 .container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .addBtn {
   font-size: 50px;
@@ -96,4 +96,7 @@ footer {
   text-align: center;
   padding: 20px 0px;
   height: 40px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
