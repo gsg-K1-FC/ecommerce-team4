@@ -85,68 +85,15 @@
 .choice .button2:hover {
   background-color: #72c1b2;
 }
-
 .container {
-  width: 90%;
-  height: 400px;
   display: flex;
   justify-content: center;
-  justify-content: space-around;
-  padding-top: 50px;
-  padding-right: 200px;
 }
-.product1 .img1 {
-  width: 200px;
-  height: 200px;
-  padding-left: 10%;
-  padding-top: 10%;
+.addBtn {
+  font-size: 50px;
+  background-color: white;
+  border: none;
 }
-.img2 {
-  width: 200px;
-  height: 200px;
-  padding-left: 10%;
-  padding-top: 10%;
-}
-.img3 {
-  width: 200px;
-  height: 200px;
-  padding-left: 10%;
-  padding-top: 10%;
-}
-
-.product1 .information1,
-.information2 {
-  display: flex;
-  justify-content: space-around;
-}
-
-.product2 .information1,
-.information2 {
-  display: flex;
-  justify-content: space-around;
-}
-.product3 .information1,
-.information2 {
-  display: flex;
-  justify-content: space-around;
-}
-.product1 {
-  width: 20%;
-  height: 300px;
-  border: 2px #88c8bc solid;
-}
-.product2 {
-  width: 20%;
-  height: 300px;
-  border: 2px #88c8bc solid;
-}
-
-.product3 {
-  width: 20%;
-  height: 300px;
-  border: 2px #88c8bc solid;
-}
-
 footer {
   width: 100%;
   background-color: #88c8bc;
