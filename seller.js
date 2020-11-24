@@ -3,33 +3,34 @@ let products =[
     id:1,
     name: "Perfume",
     price: "$100",
-    description:"Lavander ",
+    desc:"Lavander ",
     category:"Cosmetics",
-    imageURL:"perfume.jpg" ,
+    imageURL:"images/perfume.jpg" ,
         },{
     id:2,
     name: "Lipstick",
     price: "$25",    
-    description :"Red  Shiny ",
+    desc :"Red  Shiny ",
     category:"Cosmetics",
-    imageURL:"lipstick.jpg" ,
+    imageURL:"images/lipstick.jpg" ,
         },{
     id:3,
     name: "Apple Airpods",
     price: "$100",
-    description:"Best voice Ever",
+    desc:"Best voice Ever",
     category:"Technology",
-    imageURL:"airpods.jpg" ,
+    imageURL:"images/airpods.jpg" ,
         }];
+    let cardContainer = document.createElement("div");
 
 showSellerProduct();
 
 function showSellerProduct(){
 
-    let cardContainer = document.createElement("div");
+    cardContainer.innerHTML= "";
     let cardSeller = document.getElementsByClassName("div__card")[0];
 
-products.forEach(function(productSeller){
+products.forEach(function(productSeller,i){
 
 
 
@@ -57,7 +58,7 @@ let editAnchor = document.createElement("a");
 productImg.src = productSeller.imageURL;
 productCategory.textContent=productSeller.category;
 productCardName.textContent =  productSeller.name;
-productDescription.textContent= productSeller.description;
+productDescription.textContent= productSeller.desc;
 productPrice.textContent = productSeller.price;
 deleteIcon.innerHTML = '<i class="fas fa-trash-alt"></i>';
 editAnchor.href='#';
@@ -92,18 +93,14 @@ seconedInnerDiv.className= "icon__container";
 
 
 deleteIcon.addEventListener('click',function(event){
-    var clickedButton= event.target;
-    clickedButton.parentElement.parentElement.parentElement.parentElement.remove();
+    products.splice(i,1);
+    showSellerProduct();
+
 });
-
-
 
 cardContainer.appendChild(firstDiv);
 cardSeller.appendChild(cardContainer);
 
 });
-cardContainer.className = "products__view"
- 
-
-
+cardContainer.className = "products__view";
 }
