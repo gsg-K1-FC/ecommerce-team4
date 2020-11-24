@@ -1,4 +1,4 @@
-let products = read("products");
+products = read("products");
 
 let search = document.getElementById("search");
 let searchBtn = document.getElementById("searchBtn");

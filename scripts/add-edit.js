@@ -9,6 +9,7 @@ if (!products.length) {
     let lastItem = products[products.length - 1];
     idKey = Number(lastItem.id) + 1;
 }
+
 let name = document.getElementById("name");
 let desc = document.getElementById("desc");
 let price = document.getElementById("price");
@@ -79,15 +80,12 @@ span.onclick = function() {
 
 window.onclick = function(event) {
     if (event.target == modal) {
-        //modal.style.display = "none";
+
     }
 };
 
 let editBtn = document.getElementById("editProductBtn");
 
-//editBtn.onclick = function () {
-//console.log(editBtn.itemid);
-//};
 
 function findItem(v) {
     return v.id == this;
