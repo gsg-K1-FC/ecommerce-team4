@@ -29,5 +29,5 @@ to run the project you need to:
 Our team members are:
 - [Sarah Al-Sharif](https://github.com/sarah-alsharif0)
 - [Sarah Abu Zeineh](https://github.com/saraAAZ)
-- [Khaleel Siaj](https://github.com/obaidofj)
-- [Obaid Nieroukh](https://github.com/khaleelsiaj)
+- [Khaleel Siaj](https://github.com/khaleelsiaj)
+- [Obaid Nieroukh](https://github.com/obaidofj)
