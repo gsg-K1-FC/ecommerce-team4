@@ -35,6 +35,7 @@ add_but.addEventListener("click", function(e) {
         imagUrl.value = "";
 
         save(products);
+        showSellerProduct()
     } else if (e.target.value == "Save") {
         let ind = products.findIndex(findItem, idValue.value);
         products[ind] = {
@@ -46,6 +47,7 @@ add_but.addEventListener("click", function(e) {
             imageURL: imagUrl.value,
         };
         save(products);
+        showSellerProduct()
     }
 });
 

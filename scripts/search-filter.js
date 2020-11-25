@@ -17,13 +17,21 @@ searchBtn.addEventListener("click", function() {
 });
 
 categoryList.addEventListener("change", function(e) {
+    search.value = "";
+    priceFrom.value = "";
+    priceTo.value = "";
+
     let result = products.filter(function(item) {
         return item.category == e.target.value;
     });
-    showItems(result);
+    showProds(result);
 });
 
 priceFrom.addEventListener("input", function(e) {
+    search.value = "";
+    categoryList.value = 0;
+
+
     let result = products.filter(function(item) {
 
         if (!priceTo.value) {
@@ -32,10 +40,13 @@ priceFrom.addEventListener("input", function(e) {
             return Number(item.price) >= Number(e.target.value) && Number(item.price) <= Number(priceTo.value)
         }
     });
-    showItems(result);
+    showProds(result);
 });
 
 priceTo.addEventListener("input", function(e) {
+    search.value = "";
+    categoryList.value = 0;
+
     let result = products.filter(function(item) {
         if (!priceFrom.value) {
             return Number(item.price) <= Number(e.target.value);
@@ -45,16 +56,16 @@ priceTo.addEventListener("input", function(e) {
 
 
     });
-    showItems(result);
+    showProds(result);
 });
 
 function searchName(text) {
+    categoryList.value = 0;
+    priceFrom.value = "";
+    priceTo.value = "";
+
     let result = products.filter(function(item) {
         return item.name.toUpperCase().includes(text.toUpperCase());
     });
-    showItems(result);
-}
-
-function showItems(res) {
-    console.log(res);
+    showProds(result);
 }
