@@ -3,53 +3,149 @@
   margin: 0;
   font-family: "Montserrat", sans-serif;
 }
+.header__container {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  background-color: #72c1b2;
+  top: 0;
+}
+.header__a {
+  margin-left: 2%;
+  width: 50%;
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 38px;
+  padding-top: 0.5rem;
 
-.header {
-  width: 100%;
-  height: 200px;
-  background-color: #88c8bc;
+}
+.tabs{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 50%;
+  padding-right: 20px;
+}
+.cart-icon{
+  padding-top: 5PX;
+  margin-right: 20px;
+  font-size: 30px;
+  
+}
+.cart-icon a{
+  color: black;
+}
+.font__a {
+  text-decoration: none;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+.search-block{
+  display: flex;
+  flex-direction: column;
+
+}
+.search__div{
+  display: flex;
+  background: #ffffff;
+  height: fit-content;
+  border-radius: 25px;
+}
+.search__div input {
+  padding: 5px;
+  border: none;
+  border-radius: 2rem;
+  outline: none;
+}
+.icon__div{
+  padding: 8px;
+  display: flex;
+  border-radius: 50px;
+  background: #216e60;
+  font-size: 25px;
+  height: fit-content;
+  width: fit-content;
+}
+.category-container{
   display: flex;
   justify-content: center;
-  font-size: xx-large;
+  align-items: center;
 }
-.logo {
-  padding-right: 200px;
+.decoration__container {
+
+  border: solid 1px #72c1b2;
+  background-color: white;
+  font-size: 14px;
+  width: 90px;
+  padding: 1.5px;
+  border-radius:2.2rem ;
 }
-.header .nav-bar {
+#search ::placeholder{
+  color: rgb(143, 140, 140);
+  font-weight: initial;
+  font-size: 12px;}
+.decoration__container::placeholder{
+  color: rgb(143, 140, 140);
+  font-weight: initial;
+  font-size: 12px;
+}
+.price-container{
+  display: flex;
+  justify-content: space-evenly;
   position: relative;
-  top: 50px;
-  width: 70%;
-  display: flex;
+  margin: 10px;
 }
-.header .nav {
-  width: 40%;
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
+.lebel__decoration input{
+  outline: none;
+  border: none;
+  background-color: white;
+  font-size: 14px;
+  width: 70px;
+  padding: 1.5px;
+  border-radius:3rem ;
+
 }
-.search {
-  height: 25px;
-  border-radius: 10px;
-  padding-right: 50px;
-}
-.fa-shopping-cart {
-  padding-right: 300px;
-  padding-left: 50px;
-}
-.fa-search {
-  background-color: #3f9b8a;
-  height: 35px;
-  width: 35px;
-  border-radius: 20px;
-}
-.filter {
+.lebel__decoration input i {
   position: absolute;
-  top: 80px;
-  font-size: large;
-  display: flex;
-  width: 8%;
-  justify-content: space-between;
-  padding-left: 1100px;
+
+}
+.lebel__decoration input::placeholder{
+  padding-left: 3px;
+  color: rgb(143, 140, 140);
+  font-weight: initial;
+  font-size: 12px;
+}
+.search__a{
+
+  color: black;
+  
+}
+.anchor__class{
+  background-color: #124239;
+  border-radius: 2rem;
+  position: absolute;
+  width :50%;
+}
+.input__div{
+  position: relative;
+}
+#category {
+  outline: none;
+  color: rgb(0, 0, 0);
+  font-weight: initial;
+  font-size: 12px;
+  background: none;
+  font-size: 12px;
+  letter-spacing: 1px;
+  width: 97px;
+  padding: 1.5px;
+  border: none;
 }
 .choice {
   padding-top: 30px;
@@ -57,24 +153,24 @@
   display: flex;
   justify-content: center;
 }
-.choice .button1 {
-  font-size: 30px;
-  margin: 0.2rem;
-  border: 0.1rem solid #72c1b2;
-  background-color: white;
-  padding: 0.9rem;
-  border-radius: 2rem;
+.choice button a {
+  color: black;
   font-weight: initial;
+}
+button{
+  font-size: 30px;
+  margin: 0.4rem;
+  border: 0.1rem solid #72c1b2;
+  padding: 0.9rem;
+  border-radius: 2.2rem;
+  color: black;
+  font-weight: initial;
+}
+.choice .button1 {
   background-color: #72c1b2;
 }
 .choice .button2 {
-  font-size: 30px;
-  margin: 0.2rem;
-  border: 0.1rem solid #72c1b2;
   background-color: white;
-  padding: 0.9rem;
-  border-radius: 2rem;
-  font-weight: initial;
 }
 .choice .button1:hover {
   background-color: #72c1b2;
@@ -92,11 +188,11 @@
 }
 footer {
   width: 100%;
-  background-color: #88c8bc;
+  background-color: #72c1b2;
   text-align: center;
   padding: 20px 0px;
   height: 40px;
-  position: fixed;
+  margin-top: 30px;
   bottom: 0;
   left: 0;
 }
