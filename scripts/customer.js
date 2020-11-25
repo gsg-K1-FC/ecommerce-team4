@@ -32,10 +32,14 @@ products.forEach(function(product) {
     cardContainer.appendChild(card);
     cardImage.src = product.imageURL;
     cardName.textContent = product.name;
-    cardPrice.textContent = product.price;
+    cardPrice.textContent = "$" + product.price;
     cardCategory.textContent = product.category;
-    addBtn.innerHTML = '<i class="fa fa-cart-plus" aria-hidden="true"></i>';
-
+    if (cart.findIndex(findItem, product.id) == -1) {
+        addBtn.innerHTML = '<i class="fa fa-cart-plus" aria-hidden="true"></i>';
+    } else {
+        addBtn.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i>';
+        addBtn.disabled = true;
+    }
 
     addBtn.addEventListener('click', function() {
         product.quantity = 1;
@@ -46,5 +50,8 @@ products.forEach(function(product) {
         addBtn.disabled = true;
     });
 
-
 })
+
+function findItem(v) {
+    return v.id == this;
+}

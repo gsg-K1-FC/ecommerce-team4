@@ -51,7 +51,7 @@
 
              cardImage.src = product.imageURL;
              cardName.textContent = product.name;
-             cardPrice.textContent = product.price;
+             cardPrice.textContent = "$" + product.price;
              cardCategory.textContent = product.category;
              deleteBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
              quantityText.textContent = "Quantity:";
@@ -155,7 +155,7 @@
 
              productImage.src = product.imageURL;
              productName.textContent = product.name;
-             productPrice.textContent = product.price;
+             productPrice.textContent = "$" + product.price;
              deleteBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
              productQuantity.type = "number";
              productQuantity.min = "1";

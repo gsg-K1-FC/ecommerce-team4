@@ -1,6 +1,6 @@
 let add_but = document.getElementById("add-button");
 
-let products = read("products");
+products = read("products");
 let idKey = 0;
 
 if (!products.length) {
@@ -9,7 +9,6 @@ if (!products.length) {
     let lastItem = products[products.length - 1];
     idKey = Number(lastItem.id) + 1;
 }
-
 let name = document.getElementById("name");
 let desc = document.getElementById("desc");
 let price = document.getElementById("price");
@@ -79,9 +78,7 @@ span.onclick = function() {
 };
 
 window.onclick = function(event) {
-    if (event.target == modal) {
-
-    }
+    if (event.target == modal) {}
 };
 
 let editBtn = document.getElementById("editProductBtn");
@@ -111,3 +108,15 @@ function editProd(itemid) {
     category.value = iteminfo.category;
     imagUrl.value = iteminfo.imageURL;
 }
+
+
+function deleteProd(itemid) {
+    let ind = products.indexOf(products.find(findItem, itemid));
+    if (ind != -1)
+        products.splice(ind, 1);
+    save(products);
+}
+
+cancelBtn.addEventListener("click", function(e) {
+    modal.style.display = "none";
+});
