@@ -251,5 +251,6 @@
      checkoutBtn.addEventListener("click", function() {
          alert("Checkout Successful !!");
          emptyCart();
+         save(cart, "cart");
          updateTotalPrice();
      });

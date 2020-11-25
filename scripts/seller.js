@@ -38,7 +38,6 @@ function showSellerProduct() {
         productDescription.textContent = productSeller.desc;
         productPrice.textContent = "$" + productSeller.price;
         deleteIcon.innerHTML = '<i class="fas fa-trash-alt"></i>';
-        //editBtn.href = '#';
         editBtn.setAttribute("id", "editProductBtn");
         editBtn.setAttribute("onclick", "editProd('" + productSeller.id + "')");
         editBtn.innerHTML = '<i class="fas fa-edit"></i>';
@@ -72,7 +71,7 @@ function showSellerProduct() {
 
 
         deleteIcon.addEventListener('click', function(event) {
-            //products.splice(i, 1);
+
             deleteProd(productSeller.id);
             showSellerProduct();
 
