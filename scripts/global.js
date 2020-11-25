@@ -16,21 +16,21 @@ let products = [{
         id: 1,
         name: "Perfume",
         desc: "",
-        price: "$100",
+        price: "100",
         category: "Cosmetics",
         imageURL: "images/perfume.jpg",
     }, {
         id: 2,
         name: "Lipstick",
         desc: "",
-        price: "$25",
+        price: "25",
         category: "Cosmetics",
         imageURL: "images/lipstick.jpg",
     }, {
         id: 3,
         name: "Apple Airpods",
         desc: "",
-        price: "$100",
+        price: "100",
         category: "Technology",
         imageURL: "images/airpods.jpg",
     },
@@ -38,8 +38,16 @@ let products = [{
         id: 4,
         name: "SmartWatch",
         desc: "",
-        price: "$200",
+        price: "200",
         category: "Technology",
         imageURL: "images/smartWatch.jpg",
     }
 ];
+
+
+let test = read("products");
+if (test.length == 0) {
+    save(products);
+} else {
+    products = read("products")
+}
