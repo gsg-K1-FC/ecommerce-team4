@@ -165,35 +165,39 @@
 }
 
 .choice {
+  
   padding-top: 2px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
-
 .choice button a {
   color: black;
   font-weight: initial;
 }
-
-button {
-  font-size: 24px;
-  margin: 0.4rem;
-  border: 0.1rem solid #72c1b2;
-  padding: 0rem 0.4rem;
-  border-radius: 2.2rem;
-  color: black;
+.button1__class{
+  padding-right: 20px;;
 }
-
+button {
+  font-size: 30px;
+    margin: 0.4rem;
+    border: 0.1rem solid #72c1b2;
+    padding: 0.9rem;
+    border-radius: 2.2rem;
+    color: black;
+    font-weight: initial;
+}
 .choice .button1 {
   background-color: #72c1b2;
 }
-
+.choice div button{
+  margin-top: 20px;
+}
 .choice .button2 {
   background-color: white;
 }
 
-.choice .button1:hover {
+.choice .button2:hover {
   background-color: #72c1b2;
 }
 
@@ -227,19 +231,21 @@ footer {
   height: 200px;
 }
 
-.sort__div,
-#priceAsc,
-#priceDesc {
-  font-size: 26px;
-  margin: 12px 6px 0px;
+.sort__div{
+  margin: 10px 10px 20px 50px;
 }
-
-.sortBy {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+.sort__div span {
+  font-size: 30px
 }
-
+.sort__div div {
+  margin: 10px 0px 0px 10px;
+}
+.sort__div input{
+  font-size:18px ;
+  margin-bottom: 5px;
+}
 .rightDiv {
-  width: 30vw;
+  width: 35vw;
 }
 .rightDiv div {
   float: right;

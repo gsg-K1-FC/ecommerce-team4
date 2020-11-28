@@ -320,10 +320,13 @@ button:focus {
 }
 
 .goShoppingDiv {
-  margin-right: 20px !important;
-  margin-top: 40px !important;
+  margin-right: 50px !important;
+  text-align: center;
+  margin-top: 22px;
 }
-
-.goShoppingBtn {
-  font-size: 24px !important;
+.goShoppingDiv a {
+  font-size: 18px!important;
+}
+.cart-icon {
+  color: white;
 }
