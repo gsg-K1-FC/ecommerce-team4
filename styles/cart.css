@@ -43,7 +43,7 @@ button:focus {
 .cart {
   display: flex;
   justify-content: space-between;
-  margin: 3% 3% 0 3%;
+  margin: 1.4% 3% 2% 3%;
 }
 .cart h2 {
   color: #141919;
@@ -99,7 +99,7 @@ button:focus {
 }
 .total-price-container {
   display: flex;
-  margin-left: 30%;
+  margin-left:2%;
   margin-top: 2%;
   font-size: 20px;
   font-weight: 600;
