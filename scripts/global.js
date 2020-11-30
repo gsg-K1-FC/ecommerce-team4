@@ -48,6 +48,6 @@ let products = [{
 let test = read("products");
 if (test.length == 0) {
     save(products);
-} else {
-    products = read("products")
 }
+
+products = read("products");
